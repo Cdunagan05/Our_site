@@ -1,48 +1,29 @@
-alert("It. Is. Your. Birthday.")
+//alert("It. Is. Your. Birthday.")
 
-$(function() {
-  $("#img1").draggable({  });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        } 
+    });
 });
 
-/*
-const draggableImage = document.getElementById('img1');
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
-let isDragging = false;
-let initialX, initialY;
-let offsetX, offsetY;
+//$(document).ready(function() {
+//    $(".draggable").draggable({
+//        containment: ".main-container", // Restrict dragging within the main container
+//    });
+//});
 
-draggableImage.addEventListener('mousedown', (event) => {
-    isDragging = true;
-    initialX = event.clientX - offsetX;
-    initialY = event.clientY - offsetY;
-    
-    // Add CSS to indicate dragging
-    draggableImage.style.transition = 'none';
-    draggableImage.style.zIndex = 2; // Bring it to the front
-    draggableImage.style.cursor = 'grabbing'; // Change cursor style
-});
+//$(document).ready(function() {
+  // Initialize the images as draggable
+ // $("#img1, #img2").draggable({
+   // stack: "#img1, #img2", // This ensures they stack on top of each other
+   // revert: "invalid" // If not dropped on a droppable, revert to original position
+ // }); 
 
-document.addEventListener('mousemove', (event) => {
-    if (!isDragging) return;
-    event.preventDefault();
-    
-    const currentX = event.clientX;
-    const currentY = event.clientY;
-    
-    offsetX = currentX - initialX;
-    offsetY = currentY - initialY;
-    
-    draggableImage.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
-});
-
-document.addEventListener('mouseup', () => {
-    if (isDragging) {
-        isDragging = false;
-        
-        // Reset styles when dragging ends
-        draggableImage.style.transition = 'transform 0.3s ease';
-        draggableImage.style.zIndex = 1;
-        draggableImage.style.cursor = 'grab';
-    }
-});
-*/
