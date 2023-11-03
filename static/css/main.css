@@ -46,6 +46,33 @@ section {
     transform: translateX(0);
 }
 
+.logos {
+    display: flex;
+}
+
+.logo:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.logo {
+    #background-color: red;
+    border-radius: 10px 100px / 120px;
+    padding: 1rem;
+    margin: 0 0.5rem;
+}
+
+#myPics {
+    border-radius: 10px 100px / 120px;
+}
+
 .main-container {
     height: 50%;
     width: 80%;
