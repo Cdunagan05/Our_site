@@ -2,9 +2,12 @@
 <html>
   <head>
     <title>Flask app</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js"></script>     
     <script defer src="{{url_for('static', filename='script/main.js')}}"></script>
   </head>
   <body>
@@ -26,7 +29,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="hidden">
       <h1>Here are some pics</h1>
       <div class="logos">
         <div class="logo hidden">
@@ -52,6 +55,28 @@
     <section class="hidden">
       <h1> This is my 3rd section</h1>
       <p> I need this site to be finished by saturday, so I only have a couple of days</p>
+    </section>
+
+    <section class="hidden">
+      <h1> This is the testing portion with colliding elements</h1>
+      <div id="circle1">Drag Me</div>
+      <div id="circle2"></div>
+    </section>
+
+    <section class="hidden" id="myletter">
+      <div class="letter">
+        <div class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-paper"></div>
+          <div class="envelope-detail"></div>
+        </div>
+        <div class="paper">
+          <div class="paper-content">
+            <div class="paper-close">x</div>
+            Dear Ottavia,</br></br>I hope you're having a great day, and I hope this letter finds you well.  I want you to know that you're my favorite girl in the entire world, and you're the love of my life.  I want to make you happy every single day so that I can see your beautiful smile and keep you as close to me as possible for as long as possible.</br></br>Chase
+          </div>
+        </div>
+      </div>
     </section>
 
   </body>
