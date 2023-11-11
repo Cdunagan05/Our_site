@@ -10,58 +10,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/utils/Draggable.min.js"></script>     
     <script defer src="{{url_for('static', filename='script/main.js')}}"></script>
   </head>
+
+
+
   <body>
 
+
     <section class="hidden">
-      <div class="main-container">
-        <div class="home">
-          <h1>This is going to be our website</h1>
-          <p1>This is a saved note</p1>
+      <div class="cake">
+        <div class="velas">
+          <div class="fuego"></div>
+          <div class="fuego"></div>
+          <div class="fuego"></div>
+          <div class="fuego"></div>
+          <div class="fuego"></div>
         </div>
-        <div class="earth"></div>
-        <div class="draggable">
-          <img src="https://st2.depositphotos.com/3369547/11439/v/950/depositphotos_114399660-stock-illustration-little-boy-icon-kid-design.jpg" id="boy" alt="girl">
-        </div>
-        <div class="draggable">
-          <img src="https://previews.123rf.com/images/yupiramos/yupiramos1709/yupiramos170900763/85036110-little-girl-icon.jpg" id="girl" alt="girl">
-        </div>
-        <div class="draggable"></div>
+      <div class="cobertura"></div>
+      <div class="bizcocho"></div>
+        <h2>Happy Birthday Ottavia!</h2>
+      <p class="words">From Chase</p>
       </div>
     </section>
 
+
     <section class="hidden">
-      <h1>Here are some pics</h1>
+      <h1>"She had a galaxy in her eyes, a universe in her mind."</h1>
       <div class="logos">
         <div class="logo hidden">
-          <img src="{{url_for('static', filename='IMG_5200.jpg')}}" id="myPics" width="200" height="200"/>
+          <img src="{{url_for('static', filename='IMG_5191.jpg')}}" id="myPics" width="230" height="280"/>
         </div>
         <div class="logo hidden">
-          <img src="{{url_for('static', filename='IMG_5229.jpg')}}" id="myPics" width="200" height="200"/> 
+          <img src="{{url_for('static', filename='IMG_5798.jpg')}}" id="myPics" width="230" height="280"/> 
         </div>
         <div class="logo hidden">
-          <img src="{{url_for('static', filename='IMG_5798.jpg')}}" id="myPics" width="200" height="200"/>
+          <img src="{{url_for('static', filename='IMG_4917.jpg')}}" id="myPics" width="230" height="280"/>
         </div>
         <div class="logo hidden">
-          <img src="{{url_for('static', filename='IMG_6052.JPG')}}" id="myPics" width="200" height="200"/>
+          <img src="{{url_for('static', filename='IMG_5760.JPG')}}" id="myPics" width="230" height="280"/>
         </div>
       </div>
     </section>
 
     <section class="hidden">
-      <h1> This is my 2nd section</h1>
-      <p> I'm just writing stuff here to save a spot</p>
+      <h1>You took one more loop around the sun...</h1>
+    </section>
+
+    <section class="hidden" id="solarsystem">
+      <div class="solar-system">
+        <div class="circle_thing"></div>
+        <div class="sun">
+          <div class="earth">
+            <div class="moon">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="hidden">
-      <h1> This is my 3rd section</h1>
-      <p> I need this site to be finished by saturday, so I only have a couple of days</p>
+      <h1>...and I was the lucky guy who got to take this loop with you.</h1>
+      <div class="logos">
+        <div class="logo hidden">
+          <img src="{{url_for('static', filename='IMG_5200.jpg')}}" id="myPics" width="230" height="280"/>
+        </div>
+        <div class="logo hidden">
+          <img src="{{url_for('static', filename='IMG_5229.jpg')}}" id="myPics" width="230" height="280"/> 
+        </div>
+        <div class="logo hidden">
+          <img src="{{url_for('static', filename='IMG_4857.jpg')}}" id="myPics" width="230" height="280"/>
+        </div>
+        <div class="logo hidden">
+          <img src="{{url_for('static', filename='IMG_4512.JPG')}}" id="myPics" width="230" height="280"/>
+        </div>
+      </div>
     </section>
 
-    <section class="hidden">
-      <h1> This is the testing portion with colliding elements</h1>
-      <div id="circle1">Drag Me</div>
-      <div id="circle2"></div>
-    </section>
 
     <section class="hidden" id="myletter">
       <div class="letter">
@@ -73,11 +96,45 @@
         <div class="paper">
           <div class="paper-content">
             <div class="paper-close">x</div>
-            Dear Ottavia,</br></br>I hope you're having a great day, and I hope this letter finds you well.  I want you to know that you're my favorite girl in the entire world, and you're the love of my life.  I want to make you happy every single day so that I can see your beautiful smile and keep you as close to me as possible for as long as possible.</br></br>Chase
+            Dear Ottavia,</br></br>Happy Birthday! I hope you're having an amazing day, and I hope this letter finds you well. I want you to know that you're my favorite girl in the entire world, and you're the love of my life. I want to make you happy every single day so that I can see your beautiful smile and keep you as close to me as possible for another 60-70 loops around our star.  Ti amo tanto!</br></br>Always yours, Chase
           </div>
         </div>
       </div>
     </section>
+
+
+    <section class="hidden">
+      <h1>Now, keep scrolling for some puzzles!</h1>
+    </section>
+
+    <section class="hidden" id="mypuzzle">
+      <div id='puz_box'>
+        <div id='puz'>
+          <i class='first' ondrop='drop(event)' ondragover='allowDrop(event)' ></i>
+          <i class='secon' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='third' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='fourt' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='fifth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='sixth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='seven' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='eight' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+          <i class='ninth' ondrop='drop(event)' ondragover='allowDrop(event)'></i>
+        </div>
+        <div id='puzz'>
+          <i class='third' draggable='true' ondragstart='drag(event)'></i>
+          <i class='first' draggable='true' ondragstart='drag(event)'></i>
+          <i class='secon' draggable='true' ondragstart='drag(event)'></i>
+          <i class='fourt' draggable='true' ondragstart='drag(event)'></i>
+          <i class='fifth' draggable='true' ondragstart='drag(event)'></i>
+          <i class='sixth' draggable='true' ondragstart='drag(event)'></i>
+          <i class='seven' draggable='true' ondragstart='drag(event)'></i>
+          <i class='eight' draggable='true' ondragstart='drag(event)'></i>
+          <i class='ninth' draggable='true' ondragstart='drag(event)'></i>  
+        </div>
+      </div>
+      <div id='clicks'>0</div>
+    </section>
+
 
   </body>
 </html>
